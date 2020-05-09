@@ -1,2 +1,2 @@
-# CLRS-Practice
-This repository will contain my practice and problems I solve for the popular Introduction to Algorithms textbook.
+# Data Structures and Algorithms
+This repository will contain my practice and problems for algorithms and datastructures.
