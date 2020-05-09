@@ -1,0 +1,46 @@
+What is Big O notation?
+It measures how fast or slow an algorithm/function will perform when compared to the size of it's input.
+Describes the runtime scales with respect to the input.
+
+If a function always takes the same time no matter what the input is, then it can be described as
+O(1) because the time is constant.
+
+If the runtime can be described as linear, ex: a list inputted with a length of 5 takes 5 minutes to process, and
+a list inputted with a length of 10 takes 10 minutes to process. It can be written as:
+O(n)
+
+More examples:
+
+for i in range(our_list):
+    print(our_list[i])
+
+This is O(n).
+
+for i in range(our_list):
+    for i in range(our_list):
+        print(our_list[i])
+
+This is O(n^2), (the 2 for loops make this happen).
+
+You can use other variables besides N to describe the runtime if it makes sense in the context.
+
+
+To get runtime:
+1. Different steps get added up together
+ex:
+for nums in our_list:
+    print(nums)  # O(a)
+    print(nums + 1)  # O(b)
+
+Runtime: O(a+b)
+
+2. Drop constants
+ex: if you get O(2n) just make it O(n)
+We only care about linear, quadratic etc, constants don't really show that
+
+3. Different inputs --> Different variables
+
+ex: if you have 2 lists as inputs and do some for loops or something, don't describe runtime as O(n^2)
+Describe it as O(a*b) for the 2 lists.
+
+4. Drop non-dominate terms
