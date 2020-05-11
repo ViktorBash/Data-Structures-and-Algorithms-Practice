@@ -29,6 +29,7 @@ Two cases: when node is the head and when node is anything else except the head
 Node Swap:
 - Swap the places of two nodes
 
+Reverse Linked List
 
 
 https://www.youtube.com/watch?v=gXY_2wsQf3A&list=PL5tcWHG-UPH2_HEOezeYqtMDoS6dOeNZ6

@@ -105,46 +105,155 @@ class LinkedList:
             return 0
         return 1 + self.length_recursive(node.next)
 
-    def node_swap(self, key_1, key_2):
-        # If both keys are the same, we can't swap the same thing
-        if key_1 == key_2:
+    # def node_swap(self, key_1, key_2):
+    #     # If both keys are the same, we can't swap the same thing
+    #     if key_1 == key_2:
+    #         return
+    #
+    #     # Setup
+    #     prev_1 = None
+    #     cur_1 = self.head
+    #
+    #     # Iterating through 1st node to swap to get it
+    #     while cur_1 and cur_1.data != key_1:
+    #         prev_1 = cur_1
+    #         cur_1 = cur_1.next
+    #
+    #     # Setup
+    #     prev_2 = None
+    #     cur_2 = self.head
+    #
+    #     # Getting the 2nd node through iterating until the key matches the node we are on
+    #     while cur_2 and cur_2.data != key_2:
+    #         prev_2 = cur_2
+    #         cur_2 = cur_2.next
+    #
+    #     # In case one of the nodes does not actually exist, we will just return
+    #     if not cur_1 or not cur_2:
+    #         return
+    #
+    #     # The else condition is in case the node is the head node
+    #     if prev_1:  # Check if the 1st previous node exists, (to see if the node to swap is the head)
+    #         prev_1.next = cur_2  # Changing pointer
+    #
+    #     else:
+    #         self.head = cur_2
+    #
+    #     if prev_2:  # Same thing
+    #         prev_2.next = cur_1
+    #     else:
+    #         self.head = cur_1
+    #
+    #     cur_1.next, cur_2.next = cur_2.next, cur_1.next
+
+    def node_swap(self, key1, key2):
+        if key1 == key2:
             return
 
-        # Setup
         prev_1 = None
         cur_1 = self.head
-
-        # Iterating through 1st node to swap to get it
-        while cur_1 and cur_1.data != key_1:
+        while cur_1 and cur_1.data != key1:
             prev_1 = cur_1
             cur_1 = cur_1.next
 
-        # Setup
         prev_2 = None
         cur_2 = self.head
-
-        # Getting the 2nd node through iterating until the key matches the node we are on
-        while cur_2 and cur_2.data != key_2:
+        while cur_2 and cur_2.data != key2:
             prev_2 = cur_2
             cur_2 = cur_2.next
 
-        # In case one of the nodes does not actually exist, we will just return
         if not cur_1 or not cur_2:
             return
 
-        # The else condition is in case the node is the head node
-        if prev_1:  # Check if the 1st previous node exists, (to see if the node to swap is the head)
-            prev_1.next = cur_2  # Changing pointer
-
+        if prev_1:
+            prev_1.next = cur_2
         else:
             self.head = cur_2
 
-        if prev_2:  # Same thing
+        if prev_2:
             prev_2.next = cur_1
         else:
             self.head = cur_1
-
         cur_1.next, cur_2.next = cur_2.next, cur_1.next
+
+    # A --> B --> C --> D --> None
+    # D --> C --> B --> A --> Ar
+    # We are just reversing the orientation of the arrows, nothing more
+    def reverse_iterative(self):
+        cur = self.head
+        prev = None
+
+        while cur:
+            nxt = cur.next  # Temporary variable
+            cur.next = prev
+            # self.print_helper(prev, "PREV")
+            # self.print_helper(cur, "CUR")
+            # self.print_helper(nxt, "NXT")
+            print('\n')
+            prev = cur
+            cur = nxt
+        self.head = prev
+
+    def print_helper(self, node, name):
+        if node is None:
+            print(f"{name}: None")
+        else:
+            print(f"{name}: {node.data}")
+
+    def reverse_recursive(self):
+
+        def _reverse_recursive(cur, prev):
+            if not cur:
+                return prev
+            nxt = cur.next  # Temporary variable
+            cur.next = prev
+            prev = cur
+            cur = nxt
+            return _reverse_recursive(cur, prev)
+        self.head = _reverse_recursive(cur=self.head, prev=None)
+
+    def merge_sorted(self, llist_2):
+
+        # Setup
+        p = self.head
+        q = llist_2.head
+        s = None
+
+        # If one of the lists is null
+        if not p:
+            return q
+        if not q:
+            return p
+
+        # make the head, (s)
+        if p and q:
+            if p.data <= q.data:
+                s = p
+                p = p.next
+            else:
+                s = q
+                q = q.next
+
+            new_head = s
+
+        # Make the rest of the list until we completely cycle through either p or q
+        while p and q:
+            if p.data <= q.data:
+                s.next = p
+                s = p
+                p = p.next
+            else:
+                s.next = q  # making pointer
+                s = q  # making s equal to q
+                q = q.next
+        # p is finished, so just add the rest of q on
+        if not p:
+            s.next = q
+
+        # q is finished, so just add the rest of p on
+        if not q:
+            s.next = p
+        return new_head  # Return the new list
 
 
 
@@ -173,7 +282,7 @@ llist.append("A")
 llist.append("B")
 llist.append("C")
 llist.append("D")
-llist.print_list()
+# llist.print_list()
 
 # print("Now deleting node")
 # llist.delete_node_position(2)
@@ -181,7 +290,25 @@ llist.print_list()
 # print(llist.length())
 # print(llist.length_recursive(llist.head))
 
-print("Swap Nodes")
-llist.node_swap("B", "C")
-llist.print_list()
+# print("Swap Nodes")
+# llist.node_swap("B", "C")
+# llist.reverse_iterative()
+# llist.reverse_recursive()
+# llist.print_list()
 
+llist_1 = LinkedList()
+llist_1.append(1)
+llist_1.append(5)
+llist_1.append(7)
+llist_1.append(9)
+llist_1.append(10)
+
+llist_2 = LinkedList()
+llist_2.append(2)
+llist_2.append(3)
+llist_2.append(4)
+llist_2.append(6)
+llist_2.append(8)
+
+llist_1.merge_sorted(llist_2)
+llist_1.print_list()
