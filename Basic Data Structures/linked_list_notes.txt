@@ -1,1 +1,0 @@
-Singly linekd lists are the most basic with nodes, one head and one end node/tail.

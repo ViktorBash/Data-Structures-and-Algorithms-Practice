@@ -94,6 +94,11 @@ class linked_list:
         return amount
 
 
+
+
+
+
+
 my_list = linked_list()
 # my_list.append(1)
 # my_list.append(2)

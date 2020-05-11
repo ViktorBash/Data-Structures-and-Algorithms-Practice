@@ -1,0 +1,34 @@
+Singly linked lists are the most basic with nodes, one head and one end node/tail.
+
+Singly inked list:
+Has nodes with two components, data and next. The data is just the data, and the next is the pointer to the next node.
+There is a also a head and a tail. The next pointer of the last node in a linked list points to None.
+
+Array vs Linked List:
+Insertion/Deletion
+Array: O(n), Linked List: O(1)
+
+Access Element:
+Array O(1), Linked List: O(n)
+
+Contigous Memory: Array Yes, Linked List no
+
+Linked Lists:
+Insertion:
+- Append element to the end
+- Prepend element to the beginning (make it the new head)
+- Insertion (insert after a node)
+
+Deletion
+- delete node with inputted data field, two cases: Node to be deleted is the head, or the node to be deleted is not the head
+If the node to delete is the head: Make the next node the head
+If the node to delete is not the head: Delete the node and change the pointer of the previous node
+- delete node at a certain position
+Two cases: when node is the head and when node is anything else except the head
+
+Node Swap:
+- Swap the places of two nodes
+
+
+
+https://www.youtube.com/watch?v=gXY_2wsQf3A&list=PL5tcWHG-UPH2_HEOezeYqtMDoS6dOeNZ6
