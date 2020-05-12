@@ -255,6 +255,19 @@ class LinkedList:
             s.next = p
         return new_head  # Return the new list
 
+    def nth_to_last_node(self, n):
+        total_len = self.length()
+
+        cur = self.head
+        while cur:
+            if total_len == n:
+                print(cur.data)
+                return cur
+            total_len -= 1
+            cur = cur.next
+        if cur is None:
+            return
+
 
 
 
@@ -311,4 +324,5 @@ llist_2.append(6)
 llist_2.append(8)
 
 llist_1.merge_sorted(llist_2)
-llist_1.print_list()
+# llist_1.print_list()
+print(llist_1.nth_to_last_node(2))
