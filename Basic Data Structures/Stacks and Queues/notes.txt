@@ -1,0 +1,17 @@
+Stacks and Queues in Python Notes
+
+Both:
+Very similar, linear data structures (like an array)
+We have nodes like a linked list
+
+
+Stack:
+Last In, First Out.
+Is like a stack of plates, the last one put into the stack is the first one to take out.
+
+
+Queue:
+First in First out
+Like a queue in real life. It's a line with elements waiting.
+
+We add things to the tail and remove from the head.
