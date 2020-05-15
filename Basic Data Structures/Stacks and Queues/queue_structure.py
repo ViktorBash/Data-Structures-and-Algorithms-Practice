@@ -31,14 +31,19 @@ class Queue:
         return str(self.items)
 
 
-my_queue = Queue()
-my_queue.enqueue(1)
-my_queue.enqueue(2)
-my_queue.enqueue(3)
-my_queue.enqueue(4)
-my_queue.enqueue(5)
-print(my_queue)
+def main():
+    my_queue = Queue()
+    my_queue.enqueue(1)
+    my_queue.enqueue(2)
+    my_queue.enqueue(3)
+    my_queue.enqueue(4)
+    my_queue.enqueue(5)
+    print(my_queue)
 
-my_queue.dequeue()
-my_queue.dequeue()
-print(my_queue)
+    my_queue.dequeue()
+    my_queue.dequeue()
+    print(my_queue)
+
+
+if __name__ == "__main__":
+    main()
