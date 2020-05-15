@@ -1,0 +1,31 @@
+Binary Tree In Python
+
+Binary Tree:
+Root node with child nodes (left child and right child)
+These child nodes have child nodes, and so on
+
+Binary Tree is binary (2) because each node can have up to two child nodes (or null)
+Root: first node
+Root is ancestor of all nodes
+Children nodes
+the last nodes (most bottom layer) are the leafs
+
+Depth of tree: How many levels we have traversed down.
+Each node has two pointers to the next children nodes (they can be None)
+
+Types of binary trees:
+Complete binary tree: Every level except the last if filled, and the last level is as far left as possible
+
+Full Binary Tree: Every single node has zero or 2 children. This is why it's full.
+
+There are other types but these are the two main ones for binary tree.
+
+There are multiple ways to traverse a tree, (it is not linear like a linked list).
+
+
+
+Binary Search Tree:
+binary tree which has a specific ordering property.
+On any subtree, the left node is less than the root node, which is less than the right node
+
+https://www.youtube.com/watch?v=oSWTXtMglKE 1:00

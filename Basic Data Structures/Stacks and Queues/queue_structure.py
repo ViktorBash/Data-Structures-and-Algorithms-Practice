@@ -22,13 +22,20 @@ class Queue:
         self.items.append(item)
 
     def dequeue(self):
-        self.items.pop(0)
+        return self.items.pop(0)
 
     def size(self):
         return len(self.items)
 
+    def __len__(self):
+        return len(self.items)
+
     def __str__(self):
         return str(self.items)
+
+    def peek(self):
+        if not self.is_empty():
+            return self.items[0].value
 
 
 def main():

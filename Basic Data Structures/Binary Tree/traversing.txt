@@ -1,0 +1,27 @@
+Traversing a binary tree in python (different ways since is not a linear traversal).
+Tree traversal: process of visiting/checking or updating each node in a tree data structure once
+
+Depth-First Search:
+-Pre-order
+root, left, right
+Start at the root, (check if empty).
+Then we go through the left subtree, then the right subtree. Uses recursion
+
+-In-order
+Consider left, root, right. (if BST, will be in increasing order of numbers)
+
+-Post-order
+Left, right, root
+
+Level Order Traversal:
+print each level of the tree starting from the top, with each level being printed left to right
+We use a queue to make a level order traversal.
+We enqueue the root first, and peek at the queue and print it out.
+Then we look at the children of the root, (left and right) and we enqueue them into the queue as well.
+Then we peek and print what we dequeue. We look at the children of the node we just dequeued, and add those to
+the queue. We keep doing this until the queue is empty (we have gone through all of the nodes and printed them)
+
+
+
+Breadth-First Search:
+
