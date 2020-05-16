@@ -1,0 +1,16 @@
+BST: Each node has at most two children, with the entries being ordered.
+The left child will be smaller than the parent, and the right child will be greater than the parent.
+
+BST cannot have duplicates, (it breaks the rules of a right node being larger and a left node being smaller).
+
+https://www.youtube.com/watch?v=yC83Kp2xig8&list=PL5tcWHG-UPH112e7AN7C-fwDVPVrt0wpV&index=39
+9:20
+
+BST Time Complexity
+Space: Average O(n), Worst Case O(n)
+Search Average O(log n) Worst Case O(n)
+Insert Average O(log n ) Worst Case O(n)
+Delete Average O(log n) Worst Case O(n)
+
+BST Property: definition of BST, every node on right is larger, every node on left is smaller
+Basically, checking if a binary tree is a BST

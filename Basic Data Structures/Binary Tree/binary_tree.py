@@ -151,7 +151,8 @@ class BinaryTree:  # class to make the tree
 
         return traversal
 
-    def reverse_level_order_print(self, start):
+    @staticmethod
+    def reverse_level_order_print(start):
         if start is None:
             return
 
@@ -228,7 +229,7 @@ def main():
     tree.root.left.left = Node(4)
     tree.root.left.right = Node(5)
     # print(tree.print_tree("levelorder"))
-    # print(tree.print_tree("reverselevelorder"))
+    print(tree.print_tree("reverselevelorder"))
     # print(tree.height(tree.root))
     print(tree.size())
     print(tree.size_recursive(tree.root))
