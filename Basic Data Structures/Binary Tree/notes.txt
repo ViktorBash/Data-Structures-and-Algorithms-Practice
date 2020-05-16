@@ -22,7 +22,9 @@ There are other types but these are the two main ones for binary tree.
 
 There are multiple ways to traverse a tree, (it is not linear like a linked list).
 
+Height of a tree: Height of the root node, (shortest path from node and a leaf)
 
+Size of tree: Number of nodes in the tree.
 
 Binary Search Tree:
 binary tree which has a specific ordering property.
