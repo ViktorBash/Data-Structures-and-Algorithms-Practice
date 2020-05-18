@@ -1,0 +1,10 @@
+DFS Overview:
+Most fundamental search algorithm used to explore nodes and edges of a graph. It runs with a time complexity of
+O(v+e) and is often used as a building block in other algorithms.
+
+It is not useful by itself, but is good when augmented with other stuff. Also, it is easy to learn and we need to know
+it to move on to harder algorithms.
+
+DFS: Plunges depth first into a graph without regard for which edge it takes until it can't go further and has to go
+back.
+Kind of like traversing our graph. 

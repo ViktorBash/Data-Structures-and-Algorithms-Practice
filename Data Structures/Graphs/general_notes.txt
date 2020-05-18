@@ -1,0 +1,87 @@
+Introduction:
+A graph has nodes/vertices connected to eachother through a set of edges
+(u, v, w) for an edge that has a weight.
+There are many different types of graphs, (trees is one).
+
+Directed Acyclic Graphs (DAGS):
+These are directed graphs with no cycles, and are pretty popular.
+
+
+Bipartite Graph:
+Who's vertices can be split into two groups U, V, where ever edge connects between U and V
+
+
+Complete Graph:
+A unique edge between every pair of nodes (like polygons). Worst case possible graph, (good to test performance).
+
+
+Sparse/Dense Graphs:
+Dense graph  has many edges or even nodes that connect to every other single node. A sparse graph doesn't have
+many edges when comparedto amount of nodes.
+
+
+Representing Graphs:
+Adjacency Matrix is a simple way to represent a graph.
+Pro: Space efficient, edge weight lookup is O(1), simplest graph represntation
+Con: Require v squared space. Iterating over all edges takes v squared time.
+
+
+Adjacency List: represent graph using a list. Each node shows all of it's outgoing edges.
+Pro: Space efficient for sparse graphs, iterating over also efficient
+Con: Less space efficient for denser graphs. Edge weight lookup is O(e). Slightly more complex graph representation.
+
+
+Edge List:
+Way to represent graph by an unordered list of edges.
+This representation is simple but lacks structure.
+Pro: space and iterating efficient, simple
+Con: Less space efficient for denser graphs, edge weight lookup is O(e)
+
+
+Common Problems In Graph Theory:
+before you start,
+Is the graph directed or undirected?
+Are the edges weighted?
+Will it be sparse or dense with edges?
+Which way should we represent it?
+
+
+Shortest Path Problem:
+Find shortest path of edges from node A to node B
+Algorithms: BFS (unweighted graphs), Dijkstra's, Bellman-Ford, Floyd-Warshall, A*, and more
+
+Connectivity Problem:
+Is there a path from node A to node B?
+Use union find data structure, or DFS/BFS
+
+Detect Negative Cycles in Graph:
+Does my weighted digraph have any negative cycles? If so, where?
+Algorithms: Bellman-Ford, Floyd-Warshall
+
+Strongly Connected Components (SCC):
+Can be thought of as self-contained within a directed graph.
+Algorithms: Tarjan's and Kosaraju's
+
+Traveling Salesman Problem: Find shortest path that visits all the cities.
+Algorithms: Held-Karp, branch and bound and many approximation algorithms
+
+Bridges:
+Bridges are edges that increase the number of connected components, (like bridge in real life).
+They can act as weak points or bottlenecks.
+
+Articulation Points:
+Same concept are bridges except they are nodes.
+
+Minimum Spanning Tree (MST):
+Algorithms: Kruskals, Prims, Boruvkas
+
+Network flow: Max flow
+Algorithms: Ford-Fulkerson, Edmonds-Karp, Dinics
+How much flow can we push through the network?
+
+
+
+Links:
+https://www.youtube.com/watch?v=09_LlHjoEiY
+
+https://www.youtube.com/watch?v=gXgEDyodOJU
