@@ -2,3 +2,8 @@ Breadth first search is a graph traversal algorithm
 Finds every vertex that is reachable from a source vertex, and finds the distance from the source (number of edges)
 Works on directed/undirected graphs
 Runs in O(V+E) time, V is vertices E is edges
+Building block for other algorithms.
+
+BFS: useful for finding the shortest path on an unweighted  graph.
+Explores the neighbors of a node first before it goes farther. It explores nodes in layers. It maintains a queue of
+which node it should visit next.
