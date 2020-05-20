@@ -1,0 +1,19 @@
+Topological Sort Notes
+
+Uses:
+Pre-requisites for a class, build dependencies, etc
+
+O(v+e) time, (Vertices + edges)
+Not every graph has a topological ordering, graphs with cycles can't have a valid ordering (infinity)
+Valid Graphs: Directed Acyclic Graphs, there are no cycles and only directed edges
+All trees have a topological ordering since by definition trees don't have cycles.
+
+Topological Sort:
+Pick an unvisited node
+With that node, do depth first search to explore neighboring unvisited nodes
+On the recursive callback of the DFS, add the current node to the topological ordering in reverse order.
+
+Think of topological sort like the level order of a tree. Certain nodes should not be never be before other nodes,
+except in topological sort ordering can be changed and still be correct.
+We can randomly choose any unvisited node, until there are no unvisited nodes left, we do not have to pick the head
+of the graph (especially because graphs can have multiple startpoints/heads). Top sort will still work out
