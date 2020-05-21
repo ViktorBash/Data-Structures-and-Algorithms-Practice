@@ -1,3 +1,0 @@
-"""
-Graph in Python
-"""

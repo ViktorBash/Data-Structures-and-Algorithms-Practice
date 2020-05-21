@@ -81,6 +81,20 @@ How much flow can we push through the network?
 
 
 
+
+Algorithms with Graphs:
+Common themes:
+-Doing something with the start node and then iterating through it's neighbors, while using recursion to go
+through it's neighbor's neighors, etc
+- DFS or BFS are used as the basis for a lot of algorithms
+
+Reminder: DFS keeps going until it can't anymore and then it backtracks, (Keeps going)
+BFS goes in all directions at the same time until it can't go anymore, (spreads out evenly)
+
+
+
+
+
 Links:
 https://www.youtube.com/watch?v=09_LlHjoEiY
 
