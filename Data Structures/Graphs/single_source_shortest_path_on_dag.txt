@@ -1,0 +1,8 @@
+Single Source Shortest Path (SSSP) on a directed acyclic graph (DAG).
+
+O(v+e) notation where v is vertices and e is edges. This is a linear runtime and very good (better than Dijkstra's
+algorithm). Also allows negative weights and will still work.
+
+How it works:
+Uses topological sort (top-sort) on the DAG to create a list of the nodes.
+After that we use a dictionary to key each node to the value from the starting node using the edge weights.
