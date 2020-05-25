@@ -1,0 +1,17 @@
+Dijkstra's Algorithm:
+Single Source Shortest Path (SSSP) algorithm fr graphs with non-negative edge weights
+
+Depending on how the algorithm is implemented and what data structures are used the time complexity is typically
+O(e * log(v)) which is competitive against
+
+This constraint (that there can only be non-negative edge weights) is so that Dijkstra can work in a greedy manner by
+always selecting the next most promising node.
+
+Works with directed and undirected graphs.
+
+Quick Algorithm Overview:
+
+Create a distance array where the distance to every node is positive infinity. Mark the distant to the
+start node 's' to be 0. (The start node is 0 distance away from itself).
+
+Maintain a priority-queue pairs of nodex index to distance.

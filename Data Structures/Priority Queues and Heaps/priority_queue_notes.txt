@@ -1,0 +1,20 @@
+Priority Queue Notes
+
+Priority queues are derived from heaps, (and heaps are derived from trees).
+Technically though, priority queues are not heaps.
+
+Where is a Priority Queue used:
+used for Dijkstra's algorithm in some impementations
+Anytime you need to dynamically fetch the next best or next worst element.
+Used in Huffman coding (lossless data compression)
+Used BFS algorithms such as A* to grab the next most promising node
+Used by minimum spanning tree (MST) algorithms, (Prim's algorithm ex)
+
+PQ implemented as a binary heap:
+Construction: O(n)
+Polling: O(log(n))  Removing element from the root of the heap
+Peeking (1)  See the value at the top
+Adding O(log(n)) We possible have to reshuffle the heap by bubbling up a value
+
+Naive Removing: O(N)
+

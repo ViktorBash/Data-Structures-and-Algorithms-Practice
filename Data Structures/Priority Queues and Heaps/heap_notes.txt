@@ -1,0 +1,18 @@
+Heaps are a type of tree
+There are 2 types of heaps
+
+Rules Of Heaps:
+Heaps can not have cycles, and some other rules.
+It has to follow the ordering whether it is a minheap or maxheap.
+Heaps don't have to be binary, one node can be connected to multiple nodes.
+Heaps can have multiple heads/parts that are not connected at the top
+two nodes cannot point to the same node though (not a tree, not a heap)
+A heap can be just one node or even resemble a linked list.
+
+
+Minheap and Maxheap:
+Minheap: Elements are all smaller than their children, (the elements get bigger as you go down)
+Insertion: 
+
+
+Maxheap: inverse of minheap
