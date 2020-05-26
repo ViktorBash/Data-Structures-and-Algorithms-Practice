@@ -1,2 +1,17 @@
 Bellman-Ford Algorithm:
+More simpler algorithm but still can be hard.
+Single source shortest path algorithm (SSSP). It can find the shortest path from one node to any other node.
+It is not ideal because it has a time complexity of O(EV) instead of O((E+V)log(V)) like Dijkstra's algorithm using
+a binary heap.
+We use bellman ford's algorithm when Dijkstra's fails, like when a graph has negative edge weights.
+Dijkstra's can't work with negative weights because it will go for infinity.
 
+Example of Bellman-Ford:
+Helps in finance when finding arbitrage between two or more markets.
+
+Negative Cycle:
+When there is a negative weight and the distance to some nodes can be negative infinity.
+
+BF Algorithm Steps:
+E is edges, v is vertices, s is starting node.
+D
