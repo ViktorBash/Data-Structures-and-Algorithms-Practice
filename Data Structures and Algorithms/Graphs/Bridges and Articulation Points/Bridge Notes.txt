@@ -1,0 +1,11 @@
+What are bridges and articulation points in graphs and graph theory?
+
+A bridge is an edge which if removed increases the number of connected components in the graph, (aka it is a
+choke point that splits the graph in half).
+
+Articulation point/cut vertex: A node/vertex instead of an edge like a bridge.
+
+In real life bridges/articulation points point at bottlenecks or weakpoints in a graph.
+
+Time complexity of finding bridges: O(V(V+E)) worst case
+Better programming can get to O(V+E) for a linear time complexity.
