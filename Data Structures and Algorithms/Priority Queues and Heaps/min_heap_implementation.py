@@ -4,6 +4,7 @@ Making a min heap in Python
 
 import sys
 
+
 class MinHeap:
     def __init__(self, maxsize):
         self.maxsize = maxsize
