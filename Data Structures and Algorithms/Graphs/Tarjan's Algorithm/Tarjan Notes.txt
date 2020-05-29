@@ -8,4 +8,17 @@ Low-link value:
 Value of the smallest node ID reachable from a node when doing DFS. (aka, when given a node, it is the value of the
 lowest ID node that can be reached from that node). This uses DFS
 
-3:01:10
+The Stack Invariant:
+To cope with the random traversal order of the DFS, Tarjan's algorithm has a set (often as a stack) of valid node.
+Nodes are added to the stack when they're explored for the first time.
+Nodes are removed when a SCC is found.
+
+Algorithm Overview:
+1. mark each node as unvisited
+2. Start DFS, when visiting a node assign an id and a low-link value. Mark current nodes as visited and add them to the
+stack.
+3. On DFS callback, if the previous node is on the stack then min the current node's low-link value with the last node's
+lowe link value.
+4. After visiting all neighbors
+
+3:04:22
