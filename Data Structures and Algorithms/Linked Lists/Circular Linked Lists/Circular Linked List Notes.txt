@@ -1,2 +1,3 @@
 Circular Linked List Notes:
-Same idea
+
+Same idea, except the last node points to the head.
