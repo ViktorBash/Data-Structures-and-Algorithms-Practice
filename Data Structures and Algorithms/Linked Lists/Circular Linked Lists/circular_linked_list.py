@@ -51,12 +51,32 @@ class CircularLinkedList:
             if cur_node == self.head:
                 break
 
+    def remove(self, key):
+        # If we want to remove the head
+        if self.head.next == self.head and self.head.data == key:
+            self.head = None
+        elif self.head.data == key:
+            cur_node = self.head
+            while cur_node.next != self.head:
+                cur_node = cur_node.next
+            cur_node.next = self.head.next
+            self.head = self.head.next
+        else:
+            cur_node = self.head
+            prev_node = None
+            while cur_node.next != self.head:
+                prev = cur_node
+                cur_node = cur_node.next
+                if cur_node.data == key:
+                    prev.next = cur_node.next
+                    cur_node = cur_node.next
 
-
+    def split_list(self):
 if __name__ == "__main__":
     cllist = CircularLinkedList()
-    cllist.append("C")
-    cllist.append("D")
-    cllist.prepend("B")
-    cllist.prepend("A")
+    # cllist.append("C")
+    # cllist.append("D")
+    # cllist.prepend("B")
+    # cllist.prepend("A")
+    # cllist.remove("C")
     cllist.print_list()
