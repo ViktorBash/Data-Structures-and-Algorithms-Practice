@@ -1,0 +1,2 @@
+Circular Linked List Notes:
+Same idea
