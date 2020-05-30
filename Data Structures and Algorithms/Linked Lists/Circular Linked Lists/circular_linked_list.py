@@ -112,16 +112,56 @@ class CircularLinkedList:
         print("")
         split_cllist.print_list()
 
+    def josephus_circle(self, step):
+        cur_node = self.head
+        while len(self) > 1:
+            count = 1
+            while count != step:
+                count += 1
+                cur_node = cur_node.next
+            print(f"Removed {str(cur_node.data)}")
+            self.remove_node(cur_node)
+            cur_node = cur_node.next
+        print(f"Final node left: {str(self.head.data)}")
+
+    # Remove by reference of a node instead of an index, very similar to the remove() func
+    def remove_node(self, node):
+        if self.head == node:
+            cur_node = self.head
+            while cur_node.next != self.head:
+                cur_node = cur_node.next
+            cur_node.next = self.head.next
+            self.head = self.head.next
+        else:
+            cur_node = self.head
+            prev_node = None
+            while cur_node.next != self.head:
+                prev = cur_node
+                cur_node = cur_node.next
+                if cur_node == node:
+                    prev.next = cur_node.next
+                    cur_node = cur_node.next
+
 
 if __name__ == "__main__":
     cllist = CircularLinkedList()
-    cllist.append("A")
-    cllist.append("B")
-    cllist.append("C")
-    cllist.append("D")
-    cllist.append("E")
+    # cllist.append("A")
+    # cllist.append("B")
+    # cllist.append("C")
+    # cllist.append("D")
+    # cllist.append("E")
 
     # cllist.print_list()
     # print(len(cllist))
-    print(cllist.split_list())
+    # print(cllist.split_list())
+
+    cllist.append(1)
+    cllist.append(2)
+    cllist.append(3)
+    cllist.append(4)
+
+    # cllist.remove_node(cllist.head)
+    # cllist.print_list()
+    cllist.josephus_circle(2)
+    # cllist.print_list()
 
