@@ -56,7 +56,24 @@ class DoublyLinkedList:
             temp_next.prev = new_node
 
     def add_node_before(self, data, key):
-        pass
+        if self.head is None:
+            return
+        if self.head.data == key:
+            self.prepend(data)
+            return
+        cur_node = self.head
+        while cur_node.next.data != key:
+            cur_node = cur_node.next
+        temp_node = cur_node.next
+        new_node = Node(data)
+        cur_node.next = new_node
+        new_node.prev = cur_node
+        new_node.next = temp_node
+        temp_node.prev = new_node
+        return
+
+
+
 
 if __name__ == "__main__":
     dllist = DoublyLinkedList()
@@ -70,6 +87,7 @@ if __name__ == "__main__":
     dllist.append("B")
     dllist.append("C")
     dllist.append("D")
-    dllist.add_node_after("E", "D")
+    # dllist.add_node_after("E", "D")
+    dllist.add_node_before("E", "D")
     dllist.print_list()
 
