@@ -27,7 +27,14 @@ class DoublyLinkedList:
             new_node.prev = cur_node
 
     def prepend(self, data):
-        pass
+        if self.head is None:
+            self.head = Node(data)
+        else:
+            cur_head = self.head
+            new_node = Node(data)
+            new_node.next = cur_head
+            cur_head.prev = new_node
+            self.head = new_node
 
     def print_list(self):
         cur_node = self.head
@@ -38,9 +45,11 @@ class DoublyLinkedList:
 
 if __name__ == "__main__":
     dllist = DoublyLinkedList()
+    dllist.prepend(0)
     dllist.append(1)
     dllist.append(2)
     dllist.append(3)
     dllist.append(4)
+    dllist.prepend(-1)
     dllist.print_list()
 
