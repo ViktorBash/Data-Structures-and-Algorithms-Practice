@@ -1,0 +1,4 @@
+Doubly Linked List Notes:
+Like singly linked list, except that there are prev pointers.
+Head and tail.
+The prev pointer for the head is None
