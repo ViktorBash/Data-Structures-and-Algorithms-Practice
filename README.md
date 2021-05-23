@@ -1,5 +1,5 @@
 # Data Structures and Algorithms Practice
-This repository will contain my practice and problems for algorithms and datastructures.
+This repository contains my practice for algorithms and datastructures questions.
 
 ## What To Know:
 ### Precursor:
