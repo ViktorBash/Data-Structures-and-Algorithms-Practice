@@ -1,4 +1,0 @@
-Preface Notes:
--Prerequiste: data structures like heaps and linked lists
-
-Notes for Chapter 1:
