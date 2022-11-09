@@ -17,18 +17,18 @@ Average case: O(n log n)
 
 
 def quick_sort(a):
-    quick_sort2(a, 0, len(a)-1)
+    quick_sort2(a, 0, len(a) - 1)
 
 
 def quick_sort2(a, low, hi):
     if low < hi:
         p = partition(a, low, hi)
-        quick_sort2(a, low, p-1)
+        quick_sort2(a, low, p - 1)
         quick_sort2(a, p + 1, hi)
 
 
 def get_pivot(a, low, hi):
-    mid = (hi + low)//2
+    mid = (hi + low) // 2
     pivot = hi
     if a[low] < a[mid]:
         pivot = mid
@@ -43,7 +43,7 @@ def partition(a, low, hi):
     a[pivotIndex], a[low] = a[low], a[pivotIndex]
     border = low
 
-    for i in range(low, hi+1):
+    for i in range(low, hi + 1):
         if a[i] < pivotValue:
             border += 1
             a[i], a[border] = a[border], a[i]
@@ -51,6 +51,33 @@ def partition(a, low, hi):
     return border
 
 
+def new_quicksort(x):
+    if len(x) == 1 or len(x) == 0:
+        return x
+    else:
+        pivot = x[0]
+        i = 0
+        for j in range(len(x) - 1):
+            if x[j + 1] < pivot:
+                x[j + 1], x[i + 1] = x[i + 1], x[j + 1]
+                i += 1
+        x[0], x[i] = x[i], x[0]
+        first_part = new_quicksort(x[:i])
+        second_part = new_quicksort(x[i + 1:])
+        first_part.append(x[i])
+        return first_part + second_part
+
+
+def best_quicksort(x):
+    if len(x) < 2:
+        return x
+    else:
+        pivot = x[0]
+        less = [i for i in x[1:] if i <= pivot]
+        greater = [i for i in x[1:] if i > pivot]
+        return best_quicksort(less) + [pivot] + best_quicksort(greater)
+
+
 arr = [12, 11, 13, 5, 6, 7]
-quick_sort(arr)
 print(arr)
+print(best_quicksort(arr))
