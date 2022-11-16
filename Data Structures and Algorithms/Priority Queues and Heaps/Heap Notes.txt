@@ -1,5 +1,13 @@
 Heaps are a type of tree
-There are 2 types of heaps
+There are 2 types of heaps (min heap, max heap)
+- Min heap has the minimum as the root node
+- Max heap has the maximum as the root node
+
+Time Complexity: (assume a min heap)
+- Getting the minimum: O(1)
+- Insertion: O(logN)
+- Removing the minimum: O(logN) (heapify operation)
+- Search: O(N)
 
 Rules Of Heaps:
 Heaps can not have cycles, and some other rules.
